@@ -1,9 +1,9 @@
-CREATE OR REPLACE PROCEDURE table_creation AS
+CREATE OR REPLACE PROCEDURE current_date  AS
 BEGIN
 -- display the current system date in long format
-  DBMS_OUTPUT.PUT_LINE( 'Table creation ' || TO_CHAR(SYSDATE, 'DL') );
-END table_creation;
+  DBMS_OUTPUT.PUT_LINE( 'The day and date for today is ' || TO_CHAR(SYSDATE, 'DL') );
+END current_date;
 
 BEGIN
-  table_creation(); 
+  current_date (); 
 END;
