@@ -1,9 +1,7 @@
-CREATE OR REPLACE PROCEDURE current_date  AS
+CREATE OR REPLACE PROCEDURE CURRENT_DAY_AND_DATE AS
 BEGIN
--- display the current system date in long format
-  DBMS_OUTPUT.PUT_LINE( 'The day and date for today is ' || TO_CHAR(SYSDATE, 'DL') );
-END current_date;
+  DBMS_OUTPUT.PUT_LINE( 'The current day and date is ' || TO_CHAR(SYSDATE, 'DL') );
+END CURRENT_DAY_AND_DATE;
+/
 
-BEGIN
-  current_date (); 
-END;
+EXECUTE CURRENT_DAY_AND_DATE();
